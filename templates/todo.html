@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h1>TODO</h1>
+  <p>Here is what we have to do today:</p>
+  <ul>
+    {% for task in todos %}
+      {% if task.priority == "high" %}
+        <li><p class="high">{{ task["name"] }} - {{ task.get("priority") }}</p></li>
+      {% else %}
+        <li><p>{{ task["name"] }} - {{ task.get("priority") }}</p></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <img src="/static/listpic.png" width="250px" alt="">
+  
+{% endblock %}
+

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Let's roll {{ number }} dice!!</h1>
+  <div style="display:flex;">
+    {% for die in dice_list %}
+      <h2 style="font-size:6rem;">{{ die }}</h2>
+    {% endfor %}
+  </div>
+{% endblock %}
+

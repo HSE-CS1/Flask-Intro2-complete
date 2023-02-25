@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mt-3 mb-3">Add a New Task</h1>
+
+<form action="/todo" method="post">
+
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="task" name="task" placeholder="Task">
+    <label for="task">What task do you need to do today?</label>
+</div>
+<select class="form-select mb-3" name="priority" aria-label="Default select example">
+  <option selected disabled>Choose a Priority</option>
+  <option value="high">High</option>
+  <option value="medium">Medium</option>
+  <option value="low">Low</option>
+</select>
+<button type="submit" class="btn btn-outline-primary">Add Task</button>
+  
+</form>
+
+
+{% endblock %}
